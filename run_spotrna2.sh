@@ -118,13 +118,13 @@ else
     if [[ ! -f "$path_blastn_database.nal" ]]; then
         echo ""
         echo "====================================================================="
-        echo "    Nucleotide database file $path_database/nt need to formated      "
+        echo "    Nucleotide database file $path_blastn_database need to formated      "
         echo "    formated to use with 'makeblastdb' program in BLAST-N program.   "  
         echo ""          
 		echo "    Formatting may take 2-3 hours as size of file is around 270 GBs. "
         echo "====================================================================="
         echo ""
-        $path_blastn/makeblastdb -in $path_database/nt -dbtype nucl
+        $path_blastn/makeblastdb -in $path_blastn_database -dbtype nucl
         
         if [[ $? -eq 0 ]]; then
                 echo ""
